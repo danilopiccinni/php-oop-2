@@ -26,12 +26,13 @@
         <?php foreach($prodotti as $prodotto) {
         ?>
         <div class="card" style="width: 18rem;">
-            <img src="<?php echo $prodotto->immagine ?>" class="card-img-top" alt="...">
+            <img src="<?php echo $prodotto->getImage() ?>" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title"><?php echo $prodotto->nome ?></h5>
+                <h5 class="card-title"><?php echo $prodotto->getName() ?></h5>
                 <p class="card-text"><?php echo $prodotto->descrizione ?></p>
+                <h3><?php echo 'Euro ' . $prodotto->getPrice()?></h3>
                 <h6><?php echo $prodotto::$tipo ?></h6>
-                <h6><?php echo 'categoria: ' . $prodotto->categoria ?></h6>
+                <h6><?php echo 'categoria: ' . $prodotto->getCategoria() ?></h6>
                 <a href="#" class="btn btn-primary">Compra</a>
             </div>
          </div>

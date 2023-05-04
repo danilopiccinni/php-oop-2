@@ -12,5 +12,17 @@ class Prodotto {
         $this->immagine = $immagine;
         $this->disponibilita = $disponibilita;
     }
+
+    public function getName() {
+        return $this->nome;
+    }
+
+    public function getImage() {
+        return $this->immagine;
+    }
+
+    public function getPrice() {
+        return $this->prezzo;
+    }
 }
 

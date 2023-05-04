@@ -11,4 +11,12 @@ class Abbigliamento extends Prodotto {
         $this->categoria = $categoria;
         $this->descrizione = $descrizione;
     }
+
+    public function getCategoria() {
+        return $this->categoria;
+    }
+
+    public function getDescription() {
+        return $this->descrizione;
+    }
 }
