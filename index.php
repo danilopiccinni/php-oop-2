@@ -31,6 +31,7 @@
                 <h5 class="card-title"><?php echo $prodotto->nome ?></h5>
                 <p class="card-text"><?php echo $prodotto->descrizione ?></p>
                 <h6><?php echo $prodotto::$tipo ?></h6>
+                <h6><?php echo 'categoria: ' . $prodotto->categoria ?></h6>
                 <a href="#" class="btn btn-primary">Compra</a>
             </div>
          </div>
