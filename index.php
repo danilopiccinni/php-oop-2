@@ -22,10 +22,10 @@
 </head>
 <body>
 
-    <div class="container d-flex gap-3">
+    <div class="container d-flex gap-3 flex-wrap">
         <?php foreach($prodotti as $prodotto) {
         ?>
-        <div class="card" style="width: 18rem;">
+        <div class="card col-3" style="width: 18rem;">
             <img src="<?php echo $prodotto->getImage() ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $prodotto->getName() ?></h5>
