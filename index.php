@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
+<!-- Form per inserire un nuovo prodotto -->
     <div class="container p-5">
         <h3>inserisci un nuovo prodotto nel database</h3>
         <form action="index.php" method="GET">
@@ -45,7 +45,7 @@
         </form>
     </div>
 
-
+<!-- Elenco di tutti i prodotti nel database -->
     <div class="container d-flex gap-3 flex-wrap">
         <?php foreach($_SESSION['prodotti'] as $prodotto) {
         ?>

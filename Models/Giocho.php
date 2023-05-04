@@ -1,22 +1,18 @@
 <?php
 
 class Gioco extends Prodotto {
-    public $categoria;
-    public $descrizione;
+
+    public $forma;
+    public $peso;
     public static $tipo = 'Gioco';
 
-    function __construct(string $nome,string $immagine, int $prezzo,  int $disponibilita, string $descrizione, string $categoria) {
+    function __construct(string $nome,string $immagine, int $prezzo,  int $disponibilita, string $categoria, string $descrizione, string $forma, int $peso) {
 
-        parent::__construct($nome,$immagine, $prezzo,  $disponibilita);
-        $this->categoria = $categoria;
-        $this->descrizione = $descrizione;
+        parent::__construct($nome,$immagine, $prezzo,  $disponibilita, $categoria, $descrizione);
+
+        $this->forma = $forma;
+        $this->peso = $peso;
+        
     }
 
-    public function getCategoria() {
-        return $this->categoria;
-    }
-
-    public function getDescription() {
-        return $this->descrizione;
-    }
 }
