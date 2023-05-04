@@ -22,8 +22,32 @@
 </head>
 <body>
 
+    <div class="container p-5">
+        <h3>inserisci un nuovo prodotto nel database</h3>
+        <form action="index.php" method="GET">
+            <input type="text" placeholder="nome" name="nome">
+            <input type="number" placeholder="prezzo" name="prezzo">
+            <input type="number" placeholder="diponibilita" name="disponibilita">
+            <input type="text" placeholder="descrizione" name="descrizione">
+            <select name="categoria" id="">
+                <option value="">Scegli categoria</option>
+                <option value="cane">cane</option>
+                <option value="gatto">gatto</option>
+            </select>
+            <select name="tipo" id="">
+                <option value="">Scegli tipologia</option>
+                <option value="cibo">cibo</option>
+                <option value="gioco">gioco</option>
+                <option value="abbigliamento">abbigliamento</option>
+                <option value="cuccia">cuccia</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+
+
     <div class="container d-flex gap-3 flex-wrap">
-        <?php foreach($prodotti as $prodotto) {
+        <?php foreach($_SESSION['prodotti'] as $prodotto) {
         ?>
         <div class="card col-3" style="width: 18rem;">
             <img src="<?php echo $prodotto->getImage() ?>" class="card-img-top" alt="...">

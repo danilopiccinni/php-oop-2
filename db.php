@@ -20,5 +20,26 @@ $prodotti = [
     $royalCanine,
     $corda,
     $gomitolo,
-
 ];
+
+session_start();
+if (!isset($_SESSION['prodotti'])) {
+    $_SESSION['prodotti'] = $prodotti;
+}
+
+if(isset($_GET['nome']) && isset($_GET['prezzo']) && isset($_GET['disponibilita']) && isset($_GET['descrizione']) && isset($_GET['categoria']) && isset($_GET['tipo'])) {
+    if($_GET['tipo'] == 'cibo') {
+        $nuovoProdotto = new Cibo($_GET['nome'], 'https://picsum.photos/seed/picsum/100/100', $_GET['prezzo'], $_GET['disponibilita'], $_GET['descrizione'], $_GET['categoria']);
+        $_SESSION['prodotti'][] = $nuovoProdotto;
+    } else if ($_GET['tipo'] == 'gioco') {
+        $nuovoProdotto = new Gioco($_GET['nome'], 'https://picsum.photos/seed/picsum/100/100', $_GET['prezzo'], $_GET['disponibilita'], $_GET['descrizione'], $_GET['categoria']);
+        $_SESSION['prodotti'][] = $nuovoProdotto;
+    } else if(($_GET['tipo'] == 'abbigliamento')) {
+        $nuovoProdotto = new Abbigliamento($_GET['nome'], 'https://picsum.photos/seed/picsum/100/100', $_GET['prezzo'], $_GET['disponibilita'], $_GET['descrizione'], $_GET['categoria']);
+        $_SESSION['prodotti'][] = $nuovoProdotto;
+    } else if ($_GET['tipo'] == 'cuccia') {
+        $nuovoProdotto =  new Cuccia($_GET['nome'], 'https://picsum.photos/seed/picsum/100/100', $_GET['prezzo'], $_GET['disponibilita'], $_GET['descrizione'], $_GET['categoria']);
+        $_SESSION['prodotti'][] = $nuovoProdotto;
+
+    }
+}
