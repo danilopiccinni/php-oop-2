@@ -9,6 +9,7 @@
         echo $e->getMessage();
     }
 
+
 ?>
 
 
@@ -67,6 +68,7 @@
                     Compra
                     </button>
                     <span>Quantità venduta: <?php echo $prodotto->getContatore() ?></span>
+                    <p>quantita rimanente: <?php echo $prodotto->quantitaDisponibile;?></p>
                 </form>
             </div>
          </div>

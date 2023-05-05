@@ -9,7 +9,6 @@ class Cibo extends Prodotto {
 
     public $pesoConfezione;
     public $etaCaneDestinata;
-    public static $tipo = 'Cibo';
 
     function __construct(string $nome,string $immagine, int $prezzo, string $categoria, int $pesoConfezione, string $etaCaneDestinata) {
 

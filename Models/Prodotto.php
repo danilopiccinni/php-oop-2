@@ -5,14 +5,14 @@ class Prodotto {
     public $immagine;
     public $prezzo;
     public $categoria;
+    public $quantitaDisponibile;
 
     function __construct(string $nome,string $immagine, int $prezzo, string $categoria) {
         $this->nome = $nome;
         $this->prezzo = $prezzo;
         $this->immagine = $immagine;
- 
         $this->categoria = $categoria;
-
+        $this->quantitaDisponibile = 5;
     }
 
     public function getName() {
@@ -29,6 +29,15 @@ class Prodotto {
 
     public function getCategoria() {
         return $this->categoria;
+    }
+
+    public function diminiusciQuantita($quantita){
+        if ($this->quantitaDisponibile > 0){
+            $this->quantitaDisponibile -= $quantita;
+        } else {
+            throw $e= new Exception('quantità esaurita');
+            var_dump($e);
+        }
     }
 
 }

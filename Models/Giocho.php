@@ -10,7 +10,6 @@ class Gioco extends Prodotto {
 
     public $forma;
     public $peso;
-    public static $tipo = 'Gioco';
 
     function __construct(string $nome,string $immagine, int $prezzo, string $categoria, string $forma, int $peso) {
 
