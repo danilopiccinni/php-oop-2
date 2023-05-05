@@ -2,6 +2,15 @@
 
     require_once './db.php';
 
+   
+    try {
+        $prodotti[0]->setContatore('a');
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+
+
+
 ?>
 
 
@@ -55,7 +64,7 @@
                 <h5 class="card-title"><?php echo $prodotto->getName() ?></h5>
                 <p class="card-text"><?php echo $prodotto->descrizione ?></p>
                 <h3><?php echo 'Euro ' . $prodotto->getPrice()?></h3>
-                <h6><?php echo $prodotto::$tipo ?></h6>
+                <h6><?php echo get_class($prodotto) ?></h6>
                 <h6><?php echo 'categoria: ' . $prodotto->getCategoria() ?></h6>
                 <a href="#" class="btn btn-primary">Compra</a>
             </div>
