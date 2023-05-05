@@ -1,6 +1,12 @@
 <?php
 
+require_once __DIR__ . '/../traits/contabile.php';
+require_once __DIR__ . '/../traits/votabile.php';
 class Abbigliamento extends Prodotto {
+
+    use Contabile;
+    use Votabile;
+
 
     public $taglia;
     public $tessuto;

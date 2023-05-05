@@ -9,8 +9,6 @@
         echo $e->getMessage();
     }
 
-
-
 ?>
 
 
@@ -54,7 +52,7 @@
 
 <!-- Elenco di tutti i prodotti nel database -->
     <div class="container d-flex gap-3 flex-wrap">
-        <?php foreach($_SESSION['prodotti'] as $prodotto) {
+        <?php foreach($_SESSION['prodotti'] as $index => $prodotto) {
         ?>
         <div class="card col-3" style="width: 18rem;">
             <img src="<?php echo $prodotto->getImage() ?>" class="card-img-top" alt="...">
@@ -63,7 +61,13 @@
                 <h3><?php echo 'Euro ' . $prodotto->getPrice()?></h3>
                 <h6><?php echo get_class($prodotto) ?></h6>
                 <h6><?php echo 'categoria: ' . $prodotto->getCategoria() ?></h6>
-                <a href="#" class="btn btn-primary">Compra</a>
+                <form action="index.php">
+
+                    <button class="btn btn-primary" type="submit" value="<?php echo $index ?>" name="compra">
+                    Compra
+                    </button>
+                    <span>Quantità venduta: <?php echo $prodotto->getContatore() ?></span>
+                </form>
             </div>
          </div>
         <?php

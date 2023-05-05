@@ -1,6 +1,11 @@
 <?php
 
+require_once __DIR__ . '/../traits/contabile.php';
+require_once __DIR__ . '/../traits/votabile.php';
 class Cibo extends Prodotto {
+
+    use Contabile;
+    use Votabile;
 
     public $pesoConfezione;
     public $etaCaneDestinata;

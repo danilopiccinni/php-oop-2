@@ -49,3 +49,9 @@ if(isset($_GET['nome']) && isset($_GET['prezzo']) && isset($_GET['categoria']) &
 
     }
 }
+
+if(isset($_GET['compra'])) {
+
+        $_SESSION['prodotti'][$_GET['compra']]->setContatore(1);
+        
+}
