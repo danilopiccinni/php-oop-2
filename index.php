@@ -36,8 +36,6 @@
         <form action="index.php" method="GET">
             <input type="text" placeholder="nome" name="nome">
             <input type="number" placeholder="prezzo" name="prezzo">
-            <input type="number" placeholder="diponibilita" name="disponibilita">
-            <input type="text" placeholder="descrizione" name="descrizione">
             <select name="categoria" id="">
                 <option value="">Scegli categoria</option>
                 <option value="cane">cane</option>
@@ -62,7 +60,6 @@
             <img src="<?php echo $prodotto->getImage() ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $prodotto->getName() ?></h5>
-                <p class="card-text"><?php echo $prodotto->descrizione ?></p>
                 <h3><?php echo 'Euro ' . $prodotto->getPrice()?></h3>
                 <h6><?php echo get_class($prodotto) ?></h6>
                 <h6><?php echo 'categoria: ' . $prodotto->getCategoria() ?></h6>

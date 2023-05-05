@@ -4,17 +4,15 @@ class Prodotto {
     public $nome;
     public $immagine;
     public $prezzo;
-    public $disponibilita;
     public $categoria;
-    public $descrizione;
 
-    function __construct(string $nome,string $immagine, int $prezzo,  int $disponibilita, string $categoria, string $descrizione) {
+    function __construct(string $nome,string $immagine, int $prezzo, string $categoria) {
         $this->nome = $nome;
         $this->prezzo = $prezzo;
         $this->immagine = $immagine;
-        $this->disponibilita = $disponibilita;
+ 
         $this->categoria = $categoria;
-        $this->descrizione = $descrizione;
+
     }
 
     public function getName() {
@@ -33,8 +31,5 @@ class Prodotto {
         return $this->categoria;
     }
 
-    public function getDescription() {
-        return $this->descrizione;
-    }
 }
 

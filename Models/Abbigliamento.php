@@ -6,9 +6,9 @@ class Abbigliamento extends Prodotto {
     public $tessuto;
     public static $tipo = 'Abbigliamento';
 
-    function __construct(string $nome,string $immagine, int $prezzo,  int $disponibilita, string $categoria, string $descrizione, string $taglia, string $tessuto) {
+    function __construct(string $nome,string $immagine, int $prezzo, string $categoria, string $taglia, string $tessuto) {
 
-        parent::__construct($nome,$immagine, $prezzo,  $disponibilita, $categoria, $descrizione);
+        parent::__construct($nome,$immagine, $prezzo, $categoria);
   
         $this->taglia = $taglia;
         $this->tessuto = $tessuto;

@@ -12,9 +12,9 @@ class Cuccia extends Prodotto {
     public $materiale;
     public static $tipo = 'Cuccia';
 
-    function __construct(string $nome,string $immagine, int $prezzo,  int $disponibilita, string $categoria, string $descrizione, string $dimensione, string $coloreCuccia, string $materiale) {
+    function __construct(string $nome,string $immagine, int $prezzo, string $categoria, string $dimensione, string $coloreCuccia, string $materiale) {
 
-        parent::__construct($nome,$immagine, $prezzo,  $disponibilita, $categoria, $descrizione);
+        parent::__construct($nome,$immagine, $prezzo, $categoria);
 
         $this->dimensione = $dimensione;
         $this->coloreCuccia = $coloreCuccia;
