@@ -1,6 +1,12 @@
 <?php
 
+require_once __DIR__ . '/../traits/contabile.php';
+require_once __DIR__ . '/../traits/votabile.php';
+
 class Gioco extends Prodotto {
+
+    use Contabile;
+    use Votabile;
 
     public $forma;
     public $peso;
